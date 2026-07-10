@@ -27,8 +27,10 @@ X_FRAME_OPTIONS = 'DENY'
 
 # CORS Config
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://edunovaaa(-[a-z0-9-]+)?\.vercel\.app$",
+]
 CORS_ALLOW_CREDENTIALS = True
-
 # Redis cache server config
 CACHES = {
     'default': {
